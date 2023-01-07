@@ -1,0 +1,20 @@
+::-webkit-scrollbar {display:none};
+
+.CustomerReview{
+    width: 500px;
+    align-items: center;
+}
+
+@media screen and (max-width: 1200px) {
+    .CustomerReview{
+      flex-direction: column;
+    }
+  }
+  
+  @media screen and (max-width: 768px)
+  {
+    .CustomerReview{
+      width: 100%;
+      align-items: center;
+    }
+  }

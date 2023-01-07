@@ -1,0 +1,117 @@
+::-webkit-scrollbar {display:none};
+
+.profile-photo-info{
+    box-shadow: rgba(240, 46, 170, 0.4) 5px 5px, #f02eaa4d 10px 10px, rgba(240, 46, 170, 0.2) 15px 15px, rgba(240, 46, 170, 0.1) 20px 20px, rgba(240, 46, 170, 0.05) 25px 25px;
+}
+.avatar-upload {
+    position: relative;
+    max-width: 205px;
+  }
+  .avatar-upload .avatar-edit {
+    position: relative ;
+    z-index: 1;
+    top: 35px;
+    right: 50px;
+
+  }
+  .avatar-upload .avatar-edit input {
+    display: none;
+  }
+  .avatar-upload .avatar-edit input + label {
+    display: inline-block;
+    width: 34px;
+    height: 34px;
+    margin-bottom: 0;
+    border-radius: 100%;
+    background: #ff42a7;
+    border: 1px solid transparent;
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.12);
+    cursor: pointer;
+    font-weight: normal;
+    transition: all 0.2s ease-in-out;
+  }
+  .avatar-preview{
+    background: url('http://i.pravatar.cc/500?img=7');
+  }
+  .imagePreview{
+    height: 100px;
+    width: fit-content;
+  }
+  .avatar-upload .avatar-edit input + label:hover {
+    background: #ff42a7;
+    border-color: #d6d6d6;
+  }
+  .avatar-upload .avatar-edit input + label:after {
+    content: "I";
+    font-family: 'FontAwesome';
+    color: white;
+    position: absolute;
+    top: 7px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    margin: auto;
+  }
+  .avatar-upload .avatar-preview {
+    width: 192px;
+    height: 192px;
+    position: relative;
+    border-radius: 100%;
+    border: 6px solid #F8F8F8;
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
+  }
+  .avatar-upload .avatar-preview > div {
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .form-group label {
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: #3F4254;
+}
+.edit{
+    border: #3F4254;
+    background-color: #ff42a7;
+    color: white;
+    border-radius: 100%;
+    
+  }
+  .icon{
+    margin-top: 7px;
+  }
+
+
+  .profile-editor{
+    width: 90%;
+    height: 100%;
+    margin: auto;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+    
+}
+.container{
+    margin: auto;
+}
+.important{
+    color: #ff42a7;
+}
+
+  .container {
+    max-width: 960px;
+    margin: 30px auto;
+    padding: 20px;
+  }
+  h1 {
+    font-size: 20px;
+    text-align: center;
+    margin: 20px 0 20px;
+  }
+  h1 small {
+    display: block;
+    font-size: 15px;
+    padding-top: 8px;
+    color: gray;
+  }

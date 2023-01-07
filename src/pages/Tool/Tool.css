@@ -1,0 +1,11 @@
+::-webkit-scrollbar {display:none};
+.heading-div{
+    width: 85%;
+    margin: auto;
+}
+@media (min-width:250px) and (max-width:900px) {
+    .heading-div{
+        width: 85%;
+        margin: auto;
+    }
+}
