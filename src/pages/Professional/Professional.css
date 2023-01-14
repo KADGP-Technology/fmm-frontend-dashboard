@@ -1,133 +1,42 @@
-
-
-#bridal-section{
-    width: 80%;
-    background-color: white;
-    border-radius: 30px;
-    margin: auto;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
-}
-.heading{
-    text-align: center;
-    margin-top: 20px;
-}
-.specialization-container{
-    margin-left: 15px;
-}
-.specialization-container{
-    text-align: center;
+.image-head{
+    height: 250px;
     width: 100%;
-    display: flex;
 }
-.select-heading{
-    margin-right: 20px;
-}
-
-
-.btn-group-one{
-    width: 100%;
-    text-align: center;
-}
-.button{
-    height: 30px;
-    border: none;
-    border-radius: 10px;
-    width: 40%;
-}
-.btn2{
-    margin-left: 20px;
-}
-
-.btn-group-two{
-    width: 100%;
-    text-align: center;
-    margin-top: -20px;
-}
-.btn4{
-    margin-left: 20px;
-    margin-bottom: 30px;
-}
-.service-offered{
-    width: 90%;
-    background-color: white;
-    border-radius: 30px;
+img{
+    height:100%;
+    width:50%;
     margin: auto;
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
-}
-.service-offered-heading{
-    text-align: center;
-    margin-top: 40px;
-}
-.check-image{
-    width: 100%;
-    display: flex;
-}
-.check{
-    width: 50%;
-    margin: auto;
-}
-.pic{
-    margin-right: auto;
-}
-.styling{
-    font-weight: 600;
-}
-.styling-input{
-    width: 80%;
-    height: 30px;
-    text-align: center;
-    border-radius: 30px;
-}
-.certification{
-    display: flex;
-    margin-top: 30px;
-}
-.experience{
-    margin-top: 30px;
-}
-.custom-select{
-    width: 80%;
-    margin: auto;
-    text-align: center;
-    height: 35px;
-    border-radius: 30px;
-}
-.travel{
-    margin-bottom: 20px;
-    border-radius: 30px;
-}
-@media (max-width:731px) and (min-width:100px)  {
-    .pic{
-        display: none;
-    }
-    .btn-group-two{
-        width: 100%;
-        text-align: center;
-        padding-top: -20px;
-    }
 }
 
 @media screen and (max-width: 768px)
 {
-  
-  .page-title-container{
-    display: none;
-     
-  }
-  .heading-text{
-    margin: auto;
-  }
+    .image-head{
+        height: 100%;
+        width: 100%;
+    }
+    img{
+        height:100%;
+        width:100%;
+    }
+
+    .heading-text2{
+        text-align: center;
+    }
 
 }
 
 @media (min-width:320px) and (max-width: 480px)
 {
+    .image-head{
+        height: 100%;
+        width: 100%;
+    }
+    img{
+        height:100%;
+        width:100%;
+    }
+    .heading-text2{
+        text-align: center;
+    }
 
-  .page-title-container{
-    display: none;
-  }
-  .heading-text{
-    margin: auto;
-  }
 }
-::-webkit-scrollbar {display:none};

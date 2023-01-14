@@ -55,7 +55,7 @@ const TablePage = (props) => {
     rows: [
       {
     
-        'heading0': <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLMl4_ScwHun3sWMAmlDsshDOzMCpJIWXsXQ&usqp=CAU" alt="" />,
+        'heading0': <img className='table-img' src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLMl4_ScwHun3sWMAmlDsshDOzMCpJIWXsXQ&usqp=CAU" alt="" />,
         'heading1': 'Lorem',
         'heading2': 'Lorem',
         'heading3': '12.12.22',
@@ -66,7 +66,7 @@ const TablePage = (props) => {
       },
       {
     
-        'heading0': <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLMl4_ScwHun3sWMAmlDsshDOzMCpJIWXsXQ&usqp=CAU" alt="" />,
+        'heading0': <img className='table-img' src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLMl4_ScwHun3sWMAmlDsshDOzMCpJIWXsXQ&usqp=CAU" alt="" />,
         'heading1': 'Lorem',
         'heading2': 'Lorem',
         'heading3': '12.12.22',
@@ -77,7 +77,7 @@ const TablePage = (props) => {
       },
       {
     
-        'heading0': <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLMl4_ScwHun3sWMAmlDsshDOzMCpJIWXsXQ&usqp=CAU" alt="" />,
+        'heading0': <img className='table-img' src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLMl4_ScwHun3sWMAmlDsshDOzMCpJIWXsXQ&usqp=CAU" alt="" />,
         'heading1': 'Lorem',
         'heading2': 'Lorem',
         'heading3': '12.12.22',
@@ -87,7 +87,7 @@ const TablePage = (props) => {
    
       },
       {
-        'heading0': <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLMl4_ScwHun3sWMAmlDsshDOzMCpJIWXsXQ&usqp=CAU" alt="" />,
+        'heading0': <img className='table-img' src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLMl4_ScwHun3sWMAmlDsshDOzMCpJIWXsXQ&usqp=CAU" alt="" />,
         'heading1': 'Lorem',
         'heading2': 'Lorem',
         'heading3': '12.12.22',
@@ -97,7 +97,7 @@ const TablePage = (props) => {
    
       },
       {
-        'heading0': <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLMl4_ScwHun3sWMAmlDsshDOzMCpJIWXsXQ&usqp=CAU" alt="" />,
+        'heading0': <img className='table-img' src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLMl4_ScwHun3sWMAmlDsshDOzMCpJIWXsXQ&usqp=CAU" alt="" />,
         'heading1': 'Lorem',
         'heading2': 'Lorem',
         'heading3': '12.12.22',
@@ -107,18 +107,7 @@ const TablePage = (props) => {
    
       },
       {
-        'heading0': <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLMl4_ScwHun3sWMAmlDsshDOzMCpJIWXsXQ&usqp=CAU" alt="" />,
-        'heading1': 'Lorem',
-        'heading2': 'Lorem',
-        'heading3': '12.12.22',
-        'heading4': 'Gandhi Hall,Delhi',
-        'heading5': '2020-01-24 19:52:28',
-        'heading6': ' 763903****',
-   
-      },
-      {
-    
-        'heading0': <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLMl4_ScwHun3sWMAmlDsshDOzMCpJIWXsXQ&usqp=CAU" alt="" />,
+        'heading0': <img className='table-img' src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLMl4_ScwHun3sWMAmlDsshDOzMCpJIWXsXQ&usqp=CAU" alt="" />,
         'heading1': 'Lorem',
         'heading2': 'Lorem',
         'heading3': '12.12.22',
@@ -129,7 +118,7 @@ const TablePage = (props) => {
       },
       {
     
-        'heading0': <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLMl4_ScwHun3sWMAmlDsshDOzMCpJIWXsXQ&usqp=CAU" alt="" />,
+        'heading0': <img className='table-img' src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLMl4_ScwHun3sWMAmlDsshDOzMCpJIWXsXQ&usqp=CAU" alt="" />,
         'heading1': 'Lorem',
         'heading2': 'Lorem',
         'heading3': '12.12.22',
@@ -140,7 +129,18 @@ const TablePage = (props) => {
       },
       {
     
-        'heading0': <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLMl4_ScwHun3sWMAmlDsshDOzMCpJIWXsXQ&usqp=CAU" alt="" />,
+        'heading0': <img className='table-img' src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLMl4_ScwHun3sWMAmlDsshDOzMCpJIWXsXQ&usqp=CAU" alt="" />,
+        'heading1': 'Lorem',
+        'heading2': 'Lorem',
+        'heading3': '12.12.22',
+        'heading4': 'Gandhi Hall,Delhi',
+        'heading5': '2020-01-24 19:52:28',
+        'heading6': ' 763903****',
+   
+      },
+      {
+    
+        'heading0': <img className='table-img' src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLMl4_ScwHun3sWMAmlDsshDOzMCpJIWXsXQ&usqp=CAU" alt="" />,
         'heading1': 'Lorem',
         'heading2': 'Lorem',
         'heading3': '12.12.22',
