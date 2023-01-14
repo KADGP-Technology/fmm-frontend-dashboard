@@ -45,3 +45,27 @@ small{
     border: 2px solid white ;
     width: 100%;
 }
+
+@media screen and (max-width: 768px)
+{
+
+  .page-title-container{
+    display: none;
+     
+  }
+  .heading-text{
+    margin: auto;
+  }
+
+}
+
+@media (min-width:320px) and (max-width: 480px)
+{
+
+  .page-title-container{
+    display: none;
+  }
+  .heading-text{
+    margin: auto;
+  }
+}

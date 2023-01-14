@@ -9,37 +9,44 @@ const TablePage = (props) => {
   const data = {
     columns: [
       {
-        label: 'Photo',
+        // label:'photo',
+        label: <ion-icon name="camera" />,
         field: 'heading0',
         sort: 'asc'
       },
       {
-        label: 'Name',
+        // label:'name',
+        label: <ion-icon name="person"></ion-icon>,
         field: 'heading1',
         sort: 'asc'
       },
       {
-        label: 'Requirements',
+        // label: 'Requirements',
+        label: <ion-icon name="settings"></ion-icon>,
         field: 'heading2',
         sort: 'asc'
       },
       {
-        label: 'Date',
+        // label: 'Date',
+        label:<ion-icon name="calendar-number"></ion-icon>,
         field: 'heading3',
         sort: 'asc'
       },
       {
-        label: 'Location',
+        // label: 'Location',
+        label: <ion-icon name="location"></ion-icon>,
         field: 'heading4',
         sort: 'asc'
       },
       {
-        label: 'Budget',
+        // label: 'budget'
+        label: <ion-icon name="wallet" className='icon'></ion-icon>,
         field: 'heading5',
         sort: 'asc'
       },
       {
-        label: 'Contact',
+        // label: 'Contact',
+        label: <ion-icon name="call"></ion-icon>,
         field: 'heading6',
         sort: 'asc'
       },

@@ -1,11 +1,41 @@
-::-webkit-scrollbar {display:none};
-.heading-div{
+::-webkit-scrollbar {
+  display: none
+}
+
+;
+
+.heading-div {
+  width: 85%;
+  margin: auto;
+}
+
+@media (min-width:250px) and (max-width:900px) {
+  .heading-div {
     width: 85%;
     margin: auto;
+  }
 }
-@media (min-width:250px) and (max-width:900px) {
-    .heading-div{
-        width: 85%;
-        margin: auto;
-    }
+
+@media screen and (max-width: 768px) {
+
+  .page-title-container {
+    display: none;
+
+  }
+
+  .heading-text {
+    margin: auto;
+  }
+
+}
+
+@media (min-width:320px) and (max-width: 480px) {
+
+  .page-title-container {
+    display: none;
+  }
+
+  .heading-text {
+    margin: auto;
+  }
 }

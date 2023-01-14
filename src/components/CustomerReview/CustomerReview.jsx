@@ -56,7 +56,7 @@ const CustomerReview = () => {
       }
     },
   };
-  return <div style={{width:'70%', height: 300, margin:"auto"}} className="CustomerReview">
+  return <div style={{width:'70%', margin:"auto"}} className="CustomerReview">
         <Chart options={data.options} series={data.series} type="area" />
   </div>;
 };

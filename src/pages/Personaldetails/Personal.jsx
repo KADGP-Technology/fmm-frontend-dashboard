@@ -9,14 +9,16 @@ const background = {
 }
 const align = {
     textAlign: 'center',
-    margin:'auto'
+    margin: 'auto'
 }
 
 
 const Personal = () => {
     return (
         <div className="Personal" style={{ overflowY: 'scroll' }}>
-            <h1 style={align}>Personal Details</h1>
+            <div className='heading-div' style={{ height: 100, width: 'auto', backgroundColor: 'black', textAlign: 'center' }}>
+                <h3 className='heading-text' style={{ color: 'white', padding: 35,float:'left',fontSize:'25px' }}>Personal Details</h3>
+            </div>
 
             <section style={background}>
                 <div class="profile-photo-info">
@@ -122,7 +124,7 @@ const Personal = () => {
                                         <h6 className='form-text'>55 A, 1st Floor, Street No 2, Laxmi Nagar, Delhi 110092 </h6>
                                     </div>
                                     <div class=" col-6">
-                                        <a href="/" style={{textDecoration:'none'}}>Edit your Address</a>
+                                        <a href="/" style={{ textDecoration: 'none' }}>Edit your Address</a>
                                     </div>
 
                                 </div>
@@ -136,7 +138,7 @@ const Personal = () => {
                                         <h2 className='form-text'>Change Password</h2>
                                     </div>
                                     <div class="col-6">
-                                            <a href="/" style={{textDecoration:'none'}}>Change Your Password</a>
+                                        <a href="/" style={{ textDecoration: 'none' }}>Change Your Password</a>
                                     </div>
 
                                 </div>

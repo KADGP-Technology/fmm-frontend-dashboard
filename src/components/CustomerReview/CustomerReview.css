@@ -2,7 +2,8 @@
 
 .CustomerReview{
     width: 500px;
-    align-items: center;
+    height: 300px;
+    align-items: flex-end;
 }
 
 @media screen and (max-width: 1200px) {
