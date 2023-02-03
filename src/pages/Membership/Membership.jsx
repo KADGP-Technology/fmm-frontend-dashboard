@@ -28,7 +28,7 @@ function Membership(props) {
                 // stops the timer
                 clearInterval(interval.current);
             }
-            else{
+            else {
                 // update timer
                 setTimerDays(Days);
                 setTimerHours(Hours);
@@ -49,47 +49,49 @@ function Membership(props) {
         <div style={{ overflowY: 'scroll' }}>
             <div>
                 <div className="Leads">
-                    <h1 style={{ textAlign: 'center' }}>Membership</h1>
-                    <div className='heading-div' style={{ height: 150, width: 'auto', backgroundColor: 'black', borderRadius: 20, textAlign: 'center' }}>
-                        <h3 className='heading-text' style={{ color: 'white', padding: 60, }}>Display a dicount offer on your profile</h3>
+                    <div className='heading-div' style={{ height: 100, width: 'auto', backgroundColor: 'black', textAlign: 'center' }}>
+                        <h3 className='heading-text' style={{ color: 'white', padding: 35,float:'left',fontSize:'25px' }}>Membership</h3>
+                    </div>
+                    <div className='heading-div' style={{ height: 150, width: 'auto', backgroundColor: 'rgba(128,128,128,0.3)',  textAlign: 'center' }}>
+                        <h3 className='heading-text' style={{ color: 'black', padding: 60, }}>Display a dicount offer on your profile</h3>
                     </div>
                     <div className="timer"></div>
                 </div>
 
-                <div>
+                {/* <div>
                     <h2 className='head'>Countown Timer</h2>
-                </div>
+                </div> */}
                 <div className='countdown-container'>
-                <div className='countdown'>
-                    <section>
-                        <p className='content'>{timerDays}</p>
-                        <small>Days</small>
-                    </section>
-                    <span className='span'>:</span>
-                    <section>
-                        <p className='content'>{timerHours}</p>
-                        <small>Hours</small>
-                    </section>
-                    <span className='span'>:</span>
-                    <section>
-                        <p className='content'>{timerMinutes}</p>
-                        <small>Minutes</small>
-                    </section>
-                    <span className='span'>:</span>
-                    <section>
-                        <p className='content'>{timerSeconds}</p>
-                        <small>Seconds</small>
-                    </section>
-                </div>
-                <br />
-                <div className='border'></div>
+                    <div className='countdown'>
+                        <section>
+                            <p className='content'>{timerDays}</p>
+                            <small>Days</small>
+                        </section>
+                        <span className='span'>:</span>
+                        <section>
+                            <p className='content'>{timerHours}</p>
+                            <small>Hours</small>
+                        </section>
+                        <span className='span'>:</span>
+                        <section>
+                            <p className='content'>{timerMinutes}</p>
+                            <small>Minutes</small>
+                        </section>
+                        <span className='span'>:</span>
+                        <section>
+                            <p className='content'>{timerSeconds}</p>
+                            <small>Seconds</small>
+                        </section>
+                    </div>
+                    <br />
+                    <div className='border'></div>
                 </div>
             </div>
 
 
 
         </div>
-        
+
     );
 }
 

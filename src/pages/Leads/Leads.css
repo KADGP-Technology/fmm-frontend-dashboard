@@ -1,1 +1,104 @@
 /* ::-webkit-scrollbar {display:none}; */
+
+ul{
+	display: flex;
+	column-gap: 1.2rem;
+}
+li{
+	list-style: none;
+}
+  
+.table {
+	border-radius: 0.2rem;
+	width: 90%;
+	padding-bottom: 1rem;
+	color: #212529;
+	margin-bottom: 0;
+	margin-top: 5rem;
+	box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  }
+  .head-sticky-container{
+	background-image: linear-gradient(to right top, #ffb6c1, #fcc9dd, #f7dcf0, #f7effb, #ffffff);
+  }
+
+
+  .table td {
+	white-space: nowrap;
+	text-align: center;
+	height: 50px;
+	vertical-align: middle;
+  }
+  .table td:hover{
+	background-image: linear-gradient(to right top, #ff72ed, #f39fff, #eec3ff, #f1e3ff, #ffffff);
+  }
+
+  .table thead th, .table thead td {
+  
+    font-size: 1.3rem;
+    border-bottom-width: 1px;
+	text-align: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+.table th:first-child, .table td:first-child {
+    position: sticky;
+    left: 0;
+	background-color: black;
+	color: white;
+	z-index: 3;
+}
+.td-name{
+	font-size: 1rem;
+}
+  .th-name{
+	text-align: center;
+	vertical-align: middle;
+  }
+  .head-icon{
+	vertical-align: middle;
+	font-size: 1rem;
+	color: #FF1493;
+  }
+
+  @media screen {
+	.table th:first-child, .table td:first-child {
+		position: sticky;
+		left: 0;
+	}
+	table{
+		scroll-behavior: smooth;
+		overflow-x: scroll;
+	}
+  }
+  @media screen and (max-width: 768px)
+{
+  .MainDash{
+      align-items: center;
+  }
+  .page-title-container{
+    display: none;
+     
+  }
+  .heading-text{
+    margin: auto;
+  }
+
+
+}
+
+@media (min-width:320px) and (max-width: 480px)
+{
+  .MainDash{
+      align-items: center;
+  }
+  .page-title-container{
+    display: none;
+  }
+  .heading-text{
+    margin: auto;
+  }
+
+}
+  .notification{
+	color: white;
+  }
