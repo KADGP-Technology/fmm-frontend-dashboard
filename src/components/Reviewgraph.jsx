@@ -56,7 +56,7 @@ const Reviewgrap = () => {
       }
     },
   };
-  return <div style={{width:'90%', margin:"auto"}} className="CustomerReview">
+  return <div style={{width:'100%', margin:"auto"}} className="CustomerReview">
         <Chart options={data.options} series={data.series} type="area" />
   </div>;
 };

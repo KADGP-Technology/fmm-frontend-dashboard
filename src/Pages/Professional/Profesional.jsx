@@ -1,6 +1,9 @@
 import React from 'react';
 import "./Professional.css";
 import 'bootstrap/dist/css/bootstrap.min.css';
+import pic from "../../Images/findmymualogo2.png"
+import headimage from '../../../src/Images/professional.jpeg'
+
 
 
 
@@ -34,69 +37,73 @@ const Professional = () => {
                     <div class="header-left">
                         <span class="header-text">Professional Details</span>
                     </div>
-                    <div class="header-right" style={{ marginTop: '3px' }}>
-                        <span class="material-icons-outlined" style={{ marginTop: '3px' }}><ion-icon name="notifications"></ion-icon></span>
-
-                        <span class="material-icons-outlined" style={{marginLeft:'1rem'}}>Hi,User<ion-icon name="person-circle" style={{ marginTop: '-6px' }}></ion-icon></span>
+                    <div class="header-right" style={{ display: 'flex', marginTop: '3px' }}>
+                        <span class="material-icons-outlined" style={{ marginTop: '3px', marginRight: '40px' }}><ion-icon name="notifications" style={{fontSize: '31px'}}></ion-icon></span>
+                        <div style={{ display: 'flex', flexDirection: 'column' }}>
+                            <span class="name-text" style={{ fontSize: '14px', marginRight: '20px' }}>Dev Mot</span>
+                            <a href="/" class="view-profile" style={{ color: '#FF385C', fontSize: '12px', textDecoration: 'none' }}>View Profile</a>
+                        </div>
+                        <span class="material-icons-outlined" style={{marginRight: '20px', marginTop: '8px' }}><ion-icon name="person-circle" style={{ marginTop: '-6px', fontSize: '34px'}}></ion-icon></span>
                     </div>
                 </header>
 
                 <aside id="sidebar">
                     <div class="sidebar-title">
                         <div class="sidebar-brand">
-                            findmy<span style={{ color: 'red' }}>mua</span>
+                            <img src={pic} style={{width: '180px'}} alt='/'/>
+                        
                         </div>
                         <span class="material-icons-outlined" style={{ marginTop: '0.2rem' }} onClick={closeSidebar}><ion-icon name="close"></ion-icon></span>
                     </div>
 
                     <ul class="sidebar-list">
                         <li class="sidebar-list-item">
-                            <a href="# /" target="_blank">
+                            <a href="/">
                                 <span><ion-icon name="home"></ion-icon></span> Dashboard
                             </a>
                         </li>
                         <li class="sidebar-list-item">
-                            <a href="# /" target="_blank">
+                            <a href="/Inbox">
                                 <span><ion-icon name="mail"></ion-icon></span> Inbox
                             </a>
                         </li>
                         <li class="sidebar-list-item">
-                            <a href="# /" target="_blank">
+                            <a href="/Leads">
                                 <span><ion-icon name="settings"></ion-icon></span> Business Leads
                             </a>
                         </li>
                         <li class="sidebar-list-item">
-                            <a href="# /" target="_blank">
+                            <a href="/Bookings">
                                 <span><ion-icon name="grid"></ion-icon></span> Manage Bookings
                             </a>
                         </li>
                         <li class="sidebar-list-item">
-                            <a href="# /" target="_blank">
+                            <a href="/Personal">
                                 <span><ion-icon name="person"></ion-icon></span> Personal Details
                             </a>
                         </li>
                         <li class="sidebar-list-item">
-                            <a href="# /" target="_blank">
+                            <a href="/Professional">
                                 <span><ion-icon name="people"></ion-icon></span> Professional Details
                             </a>
                         </li>
                         <li class="sidebar-list-item">
-                            <a href="# /" target="_blank">
+                            <a href="/Tools">
                                 <span><ion-icon name="hammer"></ion-icon></span> Promotional Tools
                             </a>
                         </li>
                         <li class="sidebar-list-item">
-                            <a href="# /" target="_blank">
+                            <a href="Membership">
                                 <span><ion-icon name="person-add"></ion-icon></span> Membership
                             </a>
                         </li>
                         <li class="sidebar-list-item">
-                            <a href="# /" target="_blank">
+                            <a href="/Support">
                                 <span><ion-icon name="information-circle"></ion-icon></span> Support
                             </a>
                         </li>
                         <li class="sidebar-list-item logout">
-                            <a href="# /" target="_blank">
+                            <a href="# /">
                                 <span><ion-icon name="log-out"></ion-icon></span> Log Out
                             </a>
                         </li>
@@ -112,10 +119,10 @@ const Professional = () => {
 
                     <div className='heading-div' style={{ height: 250, width: 'auto', backgroundColor: 'rgba(128,128,128,0.3)', textAlign: 'center' }}>
                         <div className='image-head' id='image-head'>
-                            <img className='starter-img' src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREoJfj_I545bjYfGDKt9MUQXZaRAdolVYbBg&usqp=CAU" alt="" />
+                            <img className='starter-img' src={headimage} alt="" />
                         </div>
                     </div>
-
+ 
                     <div className='button-div' style={{ height: 120,  backgroundColor: 'pink',overflowX:'scroll',overflowY:'hidden' }}>
                         <div className='button-div-first-row'>
                             <button type="button" class="btn btn-light btn-lg color" style={{ marginTop: '0.4rem', fontSize: '20px' }}>Album Name</button>
@@ -164,6 +171,7 @@ const Professional = () => {
                             <button type="button" class="btn btn-light image-btn" style={{ marginTop: '0.4rem', height: '40px', width: '50px', padding: '0', borderRadius: 10 }}><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQ22b_OXqthKNUD0RojZdv8gwUsiWFBrSePQ&usqp=CAU" alt="" style={{ height: '100%', width: '100%', borderRadius: 10 }} /></button>
                         </div>
                     </div>
+
 
 
 

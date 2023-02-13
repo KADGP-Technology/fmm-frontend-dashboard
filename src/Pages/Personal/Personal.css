@@ -9,6 +9,11 @@ body {
   .header-text{
     font-size: 20px;
     font-weight: 600;
+    font-family: praysire;
+  }
+  @font-face {
+    font-family: praysire;
+    src: url("../../Fonts/otf/praysire-praysire-400.otf") format("opentype");
   }
   .material-icons-outlined {
     vertical-align: middle;
@@ -111,7 +116,7 @@ body {
   }
   
   .sidebar-list-item:hover {
-    color:#FF385C;
+    color:pink;
     cursor: pointer;
   }
   
@@ -123,12 +128,7 @@ body {
   .sidebar-responsive {
     display: inline !important;
     position: absolute;
-    /*
-      the z-index of the ApexCharts is 11
-      we want the z-index of the sidebar higher so that
-      the charts are not showing over the sidebar 
-      on small screens
-    */
+
     z-index: 12 !important;
   }
   .logout{
@@ -142,11 +142,12 @@ body {
   
   /* ---------- MAIN ---------- */
   
-  .main-container {
+  .main-containerr {
     grid-area: main;
     height: 100%;
     overflow-y: auto;
     padding: 20px 20px;
+    background-color: #FFFFFF;
   }
   
   .main-title {
@@ -160,80 +161,7 @@ body {
   
 
 
-  .card {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-  
-    background-color: #ffffff;
-    box-sizing: border-box;
-    border: 1px solid #d2d2d3;
-    border-radius: 5px;
-    box-shadow: 0 6px 7px -4px rgba(0, 0, 0, 0.2);
-  }
-  
-  .card:first-child {
-    border-left: 7px solid #246dec;
-  }
-  
-  .card:nth-child(2) {
-    border-left: 7px solid #f5b74f;
-  }
-  
-  .card:nth-child(3) {
-    border-left: 7px solid #367952;
-  }
-  
-  .card:nth-child(4) {
-    border-left: 7px solid #cc3c43;
-  }
-  
-  .card > span {
-    font-size: 20px;
-    font-weight: 600;
-  }
-  .card-body{
-    text-align: center;
-  }
-  .card-inner {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-
-  
-  .card-inner > p {
-    font-size: 18px;
-  }
-  
-  .card-inner > span {
-    font-size: 35px;
-  }
-  
-  .charts {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-  }
-  
-  .charts-card {
-    background-color: #ffffff;
-    margin-bottom: 20px;
-    padding: 25px;
-    box-sizing: border-box;
-    -webkit-column-break-inside: avoid;
-    border: 1px solid #d2d2d3;
-    border-radius: 5px;
-    box-shadow: 0 6px 7px -4px rgba(0, 0, 0, 0.2);
-  }
-  
-  .chart-title {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 22px;
-    font-weight: 600;
-  }
+ 
   
   
   /* ---------- SCROLLBARS ---------- */
@@ -261,9 +189,6 @@ body {
 
 
 
-.profile-photo-info{
-    box-shadow: rgba(240, 46, 170, 0.4) 5px 5px, #f02eaa4d 10px 10px, rgba(240, 46, 170, 0.2) 15px 15px, rgba(240, 46, 170, 0.1) 20px 20px, rgba(240, 46, 170, 0.05) 25px 25px;
-}
 .avatar-upload {
     position: relative;
     max-width: 205px;
@@ -355,17 +280,28 @@ body {
     box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
     
 }
-.container2{
-    margin: auto;
+.container2-sub{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-content: center;
+    align-items: center;
+   justify-content: space-between;
 }
+/* .container2{
+    margin: auto;
+} */
 .important{
     color: #ff42a7;
 }
 
   .container2 {
-    max-width: 960px;
-    margin: 30px auto;
+    max-width: 90%;
+    margin: auto;
+    margin: 17px auto;
     padding: 20px;
+ 
+    background-color: #FFFFFF;
   }
   h1 {
     font-size: 20px;
@@ -398,7 +334,16 @@ body {
 }
 
 }
-
+@media screen and (max-width:552px)
+{
+.container2-sub{
+  display: flex;
+    flex-flow: row nowrap;
+    place-content: center space-between;
+    align-items: center;
+    flex-direction: column;
+}
+}
 @media (min-width:320px) and (max-width: 480px)
 {
 

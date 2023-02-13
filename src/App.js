@@ -32,7 +32,6 @@ function App() {
         <Route path="/Leads" element={<Leads />}></Route>
         <Route path="/Bookings" element={<Bookings />}></Route>
         <Route path="/Support" element={<Support />}></Route>
-
         </Routes>
         
 

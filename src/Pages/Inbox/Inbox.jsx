@@ -1,5 +1,7 @@
 import React from 'react';
 import "./Inbox.css";
+import pic from "../../Images/findmymualogo2.png"
+
 
 
 const Inbox = () => {
@@ -22,37 +24,37 @@ const Inbox = () => {
 
 
 
-    document.querySelector('.chat[data-chat=person2]').classList.add('active-chat')
-    document.querySelector('.person[data-chat=person2]').classList.add('active')
+    // document.querySelector('.chat[data-chat=person2]').classList.add('active-chat')
+    // document.querySelector('.person[data-chat=person2]').classList.add('active')
 
-    let friends = {
-        list: document.querySelector('ul.people'),
-        all: document.querySelectorAll('.left .person'),
-        name: ''
-    },
-        chat = {
-            container: document.querySelector('.container .right'),
-            current: null,
-            person: null,
-            name: document.querySelector('.container .right .top .name')
-        }
+    // let friends = {
+    //     list: document.querySelector('ul.people'),
+    //     all: document.querySelectorAll('.left .person'),
+    //     name: ''
+    // },
+    //     chat = {
+    //         container: document.querySelector('.container .right'),
+    //         current: null,
+    //         person: null,
+    //         name: document.querySelector('.container .right .top .name')
+    //     }
 
-    friends.all.forEach(f => {
-        f.addEventListener('mousedown', () => {
-            f.classList.contains('active') || setAciveChat(f)
-        })
-    });
+    // friends.all.forEach(f => {
+    //     f.addEventListener('mousedown', () => {
+    //         f.classList.contains('active') || setAciveChat(f)
+    //     })
+    // });
 
-    function setAciveChat(f) {
-        friends.list.querySelector('.active').classList.remove('active')
-        f.classList.add('active')
-        chat.current = chat.container.querySelector('.active-chat')
-        chat.person = f.getAttribute('data-chat')
-        chat.current.classList.remove('active-chat')
-        chat.container.querySelector('[data-chat="' + chat.person + '"]').classList.add('active-chat')
-        friends.name = f.querySelector('.name').innerText
-        chat.name.innerHTML = friends.name
-    }
+    // function setAciveChat(f) {
+    //     friends.list.querySelector('.active').classList.remove('active')
+    //     f.classList.add('active')
+    //     chat.current = chat.container.querySelector('.active-chat')
+    //     chat.person = f.getAttribute('data-chat')
+    //     chat.current.classList.remove('active-chat')
+    //     chat.container.querySelector('[data-chat="' + chat.person + '"]').classList.add('active-chat')
+    //     friends.name = f.querySelector('.name').innerText
+    //     chat.name.innerHTML = friends.name
+    // }
 
 
     return (
@@ -67,69 +69,73 @@ const Inbox = () => {
                     <div class="header-left">
                         <span class="header-text">Inbox</span>
                     </div>
-                    <div class="header-right" style={{ marginTop: '3px' }}>
-                        <span class="material-icons-outlined" style={{ marginTop: '3px' }}><ion-icon name="notifications"></ion-icon></span>
-
-                        <span class="material-icons-outlined" style={{ marginLeft: '1rem' }}>Hi,User<ion-icon name="person-circle" style={{ marginTop: '-6px' }}></ion-icon></span>
+                    <div class="header-right" style={{ display: 'flex', marginTop: '3px' }}>
+                        <span class="material-icons-outlined" style={{ marginTop: '3px', marginRight: '40px' }}><ion-icon name="notifications" style={{fontSize: '31px'}}></ion-icon></span>
+                        <div style={{ display: 'flex', flexDirection: 'column' }}>
+                            <span class="name-text" style={{ fontSize: '14px', marginRight: '20px' }}>Dev Mot</span>
+                            <a href="/" class="view-profile" style={{ color: '#FF385C', fontSize: '12px', textDecoration: 'none' }}>View Profile</a>
+                        </div>
+                        <span class="material-icons-outlined" style={{marginRight: '20px', marginTop: '8px' }}><ion-icon name="person-circle" style={{ marginTop: '-6px', fontSize: '34px'}}></ion-icon></span>
                     </div>
                 </header>
 
                 <aside id="sidebar">
                     <div class="sidebar-title">
                         <div class="sidebar-brand">
-                            findmy<span style={{ color: 'red' }}>mua</span>
+                            <img src={pic} style={{width: '180px'}} alt='/'/>
+                            {/* findmy<span style={{ color: 'red' }}>mua</span> */}
                         </div>
                         <span class="material-icons-outlined" style={{ marginTop: '0.2rem' }} onClick={closeSidebar}><ion-icon name="close"></ion-icon></span>
                     </div>
 
                     <ul class="sidebar-list">
                         <li class="sidebar-list-item">
-                            <a href="/" target="_blank">
+                            <a href="/">
                                 <span><ion-icon name="home"></ion-icon></span> Dashboard
                             </a>
                         </li>
                         <li class="sidebar-list-item">
-                            <a href="/Inbox" target="_blank">
+                            <a href="/Inbox">
                                 <span><ion-icon name="mail"></ion-icon></span> Inbox
                             </a>
                         </li>
                         <li class="sidebar-list-item">
-                            <a href="/Leads" target="_blank">
+                            <a href="/Leads">
                                 <span><ion-icon name="settings"></ion-icon></span> Business Leads
                             </a>
                         </li>
                         <li class="sidebar-list-item">
-                            <a href="/Bookings" target="_blank">
+                            <a href="/Bookings">
                                 <span><ion-icon name="grid"></ion-icon></span> Manage Bookings
                             </a>
                         </li>
                         <li class="sidebar-list-item">
-                            <a href="/Personal" target="_blank">
+                            <a href="/Personal">
                                 <span><ion-icon name="person"></ion-icon></span> Personal Details
                             </a>
                         </li>
                         <li class="sidebar-list-item">
-                            <a href="/Professional" target="_blank">
+                            <a href="/Professional">
                                 <span><ion-icon name="people"></ion-icon></span> Professional Details
                             </a>
                         </li>
                         <li class="sidebar-list-item">
-                            <a href="/Tools" target="_blank">
+                            <a href="/Tools">
                                 <span><ion-icon name="hammer"></ion-icon></span> Promotional Tools
                             </a>
                         </li>
                         <li class="sidebar-list-item">
-                            <a href="/Membership" target="_blank">
+                            <a href="/Membership">
                                 <span><ion-icon name="person-add"></ion-icon></span> Membership
                             </a>
                         </li>
                         <li class="sidebar-list-item">
-                            <a href="/Support" target="_blank">
+                            <a href="/Support">
                                 <span><ion-icon name="information-circle"></ion-icon></span> Support
                             </a>
                         </li>
                         <li class="sidebar-list-item logout">
-                            <a href="# /" target="_blank">
+                            <a href="# /">
                                 <span><ion-icon name="log-out"></ion-icon></span> Log Out
                             </a>
                         </li>
@@ -138,7 +144,7 @@ const Inbox = () => {
 
                 <main class="main-container">
                     <div class="main-title">
-                        <p class="font-weight-bold">Inbox</p>
+                        <p class="font-weight-bold">All Inquiries</p>
                     </div>
 
 
@@ -146,8 +152,8 @@ const Inbox = () => {
                         <div class="container">
                             <div class="left">
                                 <div class="top">
-                                    <input type="text" placeholder="Search" />
-                                    <a href="/" class="search">u</a>
+                                    <input type="text" placeholder="Search for" />
+                                    <a href="/" class="search"></a>
                                 </div>
                                 <ul class="people">
                                     <li class="person" data-chat="person1">
@@ -185,7 +191,7 @@ const Inbox = () => {
                                         <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/382994/drake.jpg" alt="" />
                                         <span class="name">Drake</span>
                                         <span class="time">2:09 PM</span>
-                                        <span class="preview">howdoyoudoaspace</span>
+                                        <span class="preview">how do you do a space</span>
                                     </li>
                                 </ul>
                             </div>
@@ -314,10 +320,23 @@ const Inbox = () => {
                                     </div>
                                 </div>
                                 <div class="write">
-                                    <a href="/" class="write-link attach">i</a>
-                                    <input type="text" />
-                                    <a href="/" class="write-link smiley">i</a>
-                                    <a href="/" class="write-link send">i</a>
+                                    <a href="/" class="write-link attach" ></a>
+                                    <input type="text" placeholder='WRITE A MESSAGE' />
+                                    <a href="/" class="write-link smiley"></a>   
+                                </div>
+                                <div class="sendButton">
+                                    <button type='button' style={{ position: 'absolute',
+                                                                   backgroundColor: '#FF385C', 
+                                                                   borderRadius: 10, 
+                                                                   color: 'rgba(255, 255, 255, 1)', 
+                                                                   border: 0, 
+                                                                   width: 86, 
+                                                                   height: 44, 
+                                                                   marginTop: 425, 
+                                                                   marginLeft: 670 }}
+                                    >
+                                        SEND
+                                    </button>
                                 </div>
                             </div>
                         </div>

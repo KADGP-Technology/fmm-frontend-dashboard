@@ -2,6 +2,8 @@ import React from 'react';
 import './Membership.css'
 import { useState } from 'react';
 import { useRef, useEffect } from 'react';
+import pic from "../../Images/findmymualogo2.png"
+import membershipcard from '../../Images/membershipcard.jfif'
 
 
 
@@ -83,69 +85,73 @@ const Membership = () => {
                     <div class="header-left">
                         <span class="header-text">Promotional Tool</span>
                     </div>
-                    <div class="header-right" style={{ marginTop: '3px'}}>
-                        <span class="material-icons-outlined" style={{ marginTop: '3px' }}><ion-icon name="notifications"></ion-icon></span>
-
-                        <span class="material-icons-outlined" style={{marginLeft:'1rem'}}>Hi,User<ion-icon name="person-circle" style={{ marginTop: '-6px' }}></ion-icon></span>
+                    <div class="header-right" style={{ display: 'flex', marginTop: '3px' }}>
+                        <span class="material-icons-outlined" style={{ marginTop: '3px', marginRight: '40px' }}><ion-icon name="notifications" style={{fontSize: '31px'}}></ion-icon></span>
+                        <div style={{ display: 'flex', flexDirection: 'column' }}>
+                            <span class="name-text" style={{ fontSize: '14px', marginRight: '20px' }}>Dev Mot</span>
+                            <a href="/" class="view-profile" style={{ color: '#FF385C', fontSize: '12px', textDecoration: 'none' }}>View Profile</a>
+                        </div>
+                        <span class="material-icons-outlined" style={{marginRight: '20px', marginTop: '8px' }}><ion-icon name="person-circle" style={{ marginTop: '-6px', fontSize: '34px'}}></ion-icon></span>
                     </div>
                 </header>
 
                 <aside id="sidebar">
                     <div class="sidebar-title">
                         <div class="sidebar-brand">
-                            findmy<span style={{ color: 'red' }}>mua</span>
+                            <img src={pic} style={{width: '180px'}} alt='/'/>
+                            {/* findmy<span style={{ color: 'red' }}>mua</span> */}
                         </div>
                         <span class="material-icons-outlined" style={{ marginTop: '0.2rem' }} onClick={closeSidebar}><ion-icon name="close"></ion-icon></span>
                     </div>
 
                     <ul class="sidebar-list">
                         <li class="sidebar-list-item">
-                            <a href="# /" target="_blank">
+                            <a href="/">
                                 <span><ion-icon name="home"></ion-icon></span> Dashboard
                             </a>
                         </li>
                         <li class="sidebar-list-item">
-                            <a href="# /" target="_blank">
+                            <a href="/Inbox">
                                 <span><ion-icon name="mail"></ion-icon></span> Inbox
                             </a>
                         </li>
                         <li class="sidebar-list-item">
-                            <a href="# /" target="_blank">
+                            <a href="Leads">
                                 <span><ion-icon name="settings"></ion-icon></span> Business Leads
                             </a>
                         </li>
                         <li class="sidebar-list-item">
-                            <a href="# /" target="_blank">
+                            <a href="/Bookings">
                                 <span><ion-icon name="grid"></ion-icon></span> Manage Bookings
                             </a>
                         </li>
                         <li class="sidebar-list-item">
-                            <a href="# /" target="_blank">
+                            <a href="/Personal">
                                 <span><ion-icon name="person"></ion-icon></span> Personal Details
                             </a>
                         </li>
                         <li class="sidebar-list-item">
-                            <a href="# /" target="_blank">
+                            <a href="/professional">
                                 <span><ion-icon name="people"></ion-icon></span> Professional Details
                             </a>
                         </li>
                         <li class="sidebar-list-item">
-                            <a href="# /" target="_blank">
+                            <a href="/Tools">
                                 <span><ion-icon name="hammer"></ion-icon></span> Promotional Tools
                             </a>
                         </li>
                         <li class="sidebar-list-item">
-                            <a href="# /" target="_blank">
+                            <a href="/Membership">
                                 <span><ion-icon name="person-add"></ion-icon></span> Membership
                             </a>
                         </li>
                         <li class="sidebar-list-item">
-                            <a href="# /" target="_blank">
+                            <a href="/Support">
                                 <span><ion-icon name="information-circle"></ion-icon></span> Support
                             </a>
                         </li>
                         <li class="sidebar-list-item logout">
-                            <a href="# /" target="_blank">
+                            <a href="# /">
                                 <span><ion-icon name="log-out"></ion-icon></span> Log Out
                             </a>
                         </li>
@@ -153,14 +159,13 @@ const Membership = () => {
                 </aside>
 
                 <main class="main-container">
-                    <div class="main-title">
-                        <p class="font-weight-bold">Promotional Tools</p>
+                    <div className='header-image-container'>
+                        <img src={membershipcard} style={{ width: '260px',height:'136px',marginTop:'1.5rem',marginBottom:'1.5rem' }} alt='/'/>
                     </div>
-
 
                     <div className='header-div2'>
                         <div className='header-div-text2'>
-                            Display a dicount offer on your profile
+                            Count Down Timer
                         </div>
                     </div>
 

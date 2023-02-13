@@ -9,6 +9,11 @@ body {
 .header-text{
   font-size: 20px;
   font-weight: 600;
+font-family: praysire;
+}
+@font-face {
+  font-family: praysire;
+  src: url("./Fonts/otf/praysire-praysire-400.otf") format("opentype");
 }
 .material-icons-outlined {
   vertical-align: middle;
@@ -63,13 +68,13 @@ body {
 .header {
   grid-area: header;
   height: 120px;
-  background-color: #000;
+  background-color: #1B1C1E;
   display: flex;
   color: white;
   align-items: center;
   justify-content: space-between;
   padding: 0 30px 0 30px;
-  box-shadow: 0 6px 7px -4px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 6px 7px -4px rgb(0 0 0 / 20%);
 }
 
 .menu-icon {
@@ -82,7 +87,7 @@ body {
 #sidebar {
   grid-area: sidebar;
   height: 100%;
-  background-color: black;
+  background-color: #1B1C1E  ;
   color: white;
   overflow-y: auto;
   transition: all 0.5s;
@@ -95,7 +100,12 @@ body {
   align-items: center;
   padding: 20px 20px 20px 20px;
   margin-bottom: 30px;
+  background-color: #1B1C1E;
 }
+
+/* .sidebar-title-logo {
+  width: 30%;
+} */
 
 .sidebar-title > span {
   display: none;
@@ -111,6 +121,8 @@ body {
   padding: 0;
   margin-top: 15px;
   list-style-type: none;
+  background-color: #1B1C1E
+  ;
 }
 
 .sidebar-list-item {
@@ -175,18 +187,20 @@ body {
 }
 .img-fluid {
   max-width: 100%;
-  width: 100%;
+  width: 60%;
   height: auto;
   margin-left: 0.5rem;
   margin-right: 0.5rem;
 }
+
 .card {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   background-color: #ffffff;
   box-sizing: border-box;
-  border: 1px solid #d2d2d3;
+  border: 2px solid ;
+  border-color: #000000;
   border-radius: 5px;
   box-shadow: 0 6px 7px -4px rgba(0, 0, 0, 0.2);
 }
@@ -208,7 +222,7 @@ body {
 }
 
 .card > span {
-  font-size: 20px;
+  font-size: 40px;
   font-weight: 600;
 }
 .card-body{
@@ -258,7 +272,10 @@ body {
   font-weight: 600;
 }
 
-
+.review{
+  width: 70%;
+  margin: auto;
+}
 /* ---------- SCROLLBARS ---------- */
 
 ::-webkit-scrollbar {
@@ -320,6 +337,10 @@ body {
     padding-left: calc(var(--bs-gutter-x) * .5);
     margin-top: var(--bs-gutter-y);
 }
+.review{
+  width: 80%;
+  margin: auto;
+}
 }
 
 
@@ -376,4 +397,9 @@ body {
     margin-top: var(--bs-gutter-y);
 }
 }
-
+@media screen and (max-width: 450px) {
+  .review{
+    width: 95%;
+    margin: auto;
+  }
+}

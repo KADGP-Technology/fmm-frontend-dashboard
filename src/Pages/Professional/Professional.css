@@ -1,21 +1,19 @@
-body {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    background-color: #e6e8ed;
-    color: #666666;
-    font-family: "Montserrat", sans-serif;
-    
-  }
+
+
   .header-text{
     font-size: 20px;
     font-weight: 600;
+    font-family: praysire
+  }
+  @font-face {
+    font-family: praysire;
+    src: url("../../Fonts/otf/praysire-praysire-400.otf") format("opentype");
   }
   .material-icons-outlined {
     vertical-align: middle;
     line-height: 1px;
   }
-  
+ 
   .text-primary {
     color: #666666;
   }
@@ -112,7 +110,7 @@ body {
   }
   
   .sidebar-list-item:hover {
-    color:#FF385C;;
+    color:pink;
     cursor: pointer;
   }
   
@@ -266,7 +264,7 @@ body {
 
 .starter-img {
     height: 100%;
-    width: 50%;
+    width: 100%;
     margin: auto;
 }
 

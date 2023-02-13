@@ -1,17 +1,12 @@
 import React from 'react';
 import "./Personal.css";
 import 'bootstrap/dist/css/bootstrap.min.css';
-const background = {
-    backgroundColor: 'white',
-    width: '100%',
-    borderRadius: 40,
-    margin: 'auto'
-}
+import pic from "../../Images/findmymualogo2.png"
+
 const align = {
     textAlign: 'center',
-    margin: 'auto'
+   width:'50%'
 }
-
 
 const Personal = () => {
     var sidebarOpen = false;
@@ -43,86 +38,84 @@ const Personal = () => {
                     <div class="header-left">
                         <span class="header-text">Personal Details</span>
                     </div>
-                    <div class="header-right" style={{ marginTop: '3px' }}>
-                        <span class="material-icons-outlined" style={{ marginTop: '3px' }}><ion-icon name="notifications"></ion-icon></span>
-
-                        <span class="material-icons-outlined" style={{marginLeft:'1rem'}}>Hi,User<ion-icon name="person-circle" style={{ marginTop: '-6px' }}></ion-icon></span>
+                    <div class="header-right" style={{ display: 'flex', marginTop: '3px' }}>
+                        <span class="material-icons-outlined" style={{ marginTop: '3px', marginRight: '40px' }}><ion-icon name="notifications" style={{fontSize: '31px'}}></ion-icon></span>
+                        <div style={{ display: 'flex', flexDirection: 'column' }}>
+                            <span class="name-text" style={{ fontSize: '14px', marginRight: '20px' }}>Dev Mot</span>
+                            <a href="/" class="view-profile" style={{ color: '#FF385C', fontSize: '12px', textDecoration: 'none' }}>View Profile</a>
+                        </div>
+                        <span class="material-icons-outlined" style={{marginRight: '20px', marginTop: '8px' }}><ion-icon name="person-circle" style={{ marginTop: '-6px', fontSize: '34px'}}></ion-icon></span>
                     </div>
                 </header>
 
                 <aside id="sidebar">
                     <div class="sidebar-title">
                         <div class="sidebar-brand">
-                            findmy<span style={{ color: 'red' }}>mua</span>
+                            <img src={pic} style={{width: '180px'}} alt='/'/>
                         </div>
                         <span class="material-icons-outlined" style={{ marginTop: '0.2rem' }} onClick={closeSidebar}><ion-icon name="close"></ion-icon></span>
                     </div>
 
                     <ul class="sidebar-list">
                         <li class="sidebar-list-item">
-                            <a href="# /" target="_blank">
+                            <a href="/">
                                 <span><ion-icon name="home"></ion-icon></span> Dashboard
                             </a>
                         </li>
                         <li class="sidebar-list-item">
-                            <a href="# /" target="_blank">
+                            <a href="/Inbox">
                                 <span><ion-icon name="mail"></ion-icon></span> Inbox
                             </a>
                         </li>
                         <li class="sidebar-list-item">
-                            <a href="# /" target="_blank">
+                            <a href="/Leads">
                                 <span><ion-icon name="settings"></ion-icon></span> Business Leads
                             </a>
                         </li>
                         <li class="sidebar-list-item">
-                            <a href="# /" target="_blank">
+                            <a href="/Bookings">
                                 <span><ion-icon name="grid"></ion-icon></span> Manage Bookings
                             </a>
                         </li>
                         <li class="sidebar-list-item">
-                            <a href="# /" target="_blank">
+                            <a href="/Personal">
                                 <span><ion-icon name="person"></ion-icon></span> Personal Details
                             </a>
                         </li>
                         <li class="sidebar-list-item">
-                            <a href="# /" target="_blank">
+                            <a href="/Professional">
                                 <span><ion-icon name="people"></ion-icon></span> Professional Details
                             </a>
                         </li>
                         <li class="sidebar-list-item">
-                            <a href="# /" target="_blank">
+                            <a href="/Tools">
                                 <span><ion-icon name="hammer"></ion-icon></span> Promotional Tools
                             </a>
                         </li>
                         <li class="sidebar-list-item">
-                            <a href="# /" target="_blank">
+                            <a href="/Membership">
                                 <span><ion-icon name="person-add"></ion-icon></span> Membership
                             </a>
                         </li>
                         <li class="sidebar-list-item">
-                            <a href="# /" target="_blank">
+                            <a href="/Support">
                                 <span><ion-icon name="information-circle"></ion-icon></span> Support
                             </a>
                         </li>
                         <li class="sidebar-list-item logout">
-                            <a href="# /" target="_blank">
+                            <a href="# /">
                                 <span><ion-icon name="log-out"></ion-icon></span> Log Out
                             </a>
                         </li>
                     </ul>
                 </aside>
 
-                <main class="main-container">
-                    <div class="main-title">
-                        <p class="font-weight-bold">Personal Details</p>
-                    </div>
-
-
-
-                    <section style={background}>
-                        <div class="profile-photo-info">
-                            <div class="container2">
-                                <div class="container2">
+                <main class="main-containerr">
+                      <section>
+                        <div class="profile-photo-info">    
+                            <div class="container2">    
+                                <div class="container2-sub">
+                            
                                     <div class="avatar-upload" style={align}>
                                         <div class="avatar-edit">
                                             <input type='file' id="imageUpload" accept=".png, .jpg, .jpeg" />
@@ -133,63 +126,57 @@ const Personal = () => {
                                             </div>
                                         </div>
                                     </div>
+                                    <div class="row" style={{display: 'flex',flexDirection:'column',width:'100%',alignItems:'flex-start'}}>
+                                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                                    <div class="form-group">
+                                                        <label class="profile_details_text text-lg-start">
+                                                            <h4 className='form-text'> First Name: <b class="important">*</b></h4>
+                                                        </label>
+                                                        <input type="text" name="first_name" class="form-control h-50px"
+                                                            value="" style={{ fontSize: 20 }} required />
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                                    <div class="form-group">
+                                                        <label class="profile_details_text form-text">
+                                                            <h4 className='form-text'> Last Name: <b class="important">*</b></h4>
+                                                        </label>
+                                                        <input type="text" name="last_name" class="form-control h-50px" value=""
+                                                            style={{ fontSize: 20 }} required />
+                                                    </div>
+                                                </div>
+                                            </div>
+
                                 </div>
+                                
                                 <br />
-                                <br />
+                                {/* <br /> */}
                                 <div
                                 >
                                     <form action="" method="POST">
-                                        <h3 className='' style={align}>Profile Edit</h3>
-                                        <br />
-                                        <div class="row">
-                                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                                                <div class="form-group">
-                                                    <label class="profile_details_text text-lg-start">
-                                                        <h4 className='form-text'> First Name: <b class="important">*</b></h4>
-                                                    </label>
-                                                    <input type="text" name="first_name" class="form-control h-50px"
-                                                        value="" style={{ fontSize: 20 }} required />
+                                        
+                                        {/* <br /> */}
+                                        <div>
+                                           
+                                            <br />
+                                            <div class="row">
+                                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                                    <div class="form-group" style={{ width: '25%' }}>
+                                                        {/* <label class="profile_details_text">
+                                                            <h4 className='form-text'> Gender:<b class="important">*</b></h4>
+                                                        </label> */}
+                                                        <select name="gender"  class="form-control h-50px form-text" value=""
+                                                            style={{ fontSize: 20 }}  required>
+                                                            <option value="Gender">Select Gender</option>
+                                                            <option value="Male">Male</option>
+                                                            <option value="Female">Female</option>
+                                                            <option value="Other">Other</option>
+                                                        </select>
+                                                    </div>
                                                 </div>
                                             </div>
-                                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                                                <div class="form-group">
-                                                    <label class="profile_details_text form-text">
-                                                        <h4 className='form-text'> Last Name: <b class="important">*</b></h4>
-                                                    </label>
-                                                    <input type="text" name="last_name" class="form-control h-50px" value=""
-                                                        style={{ fontSize: 20 }} required />
-                                                </div>
-                                            </div>
+                                            <br />
                                         </div>
-                                        <br />
-                                        <div class="row">
-                                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                                <div class="form-group">
-                                                    <label class="profile_details_text">
-                                                        <h4 className='form-text'> Gender:<b class="important">*</b></h4>
-                                                    </label>
-                                                    <select name="gender" class="form-control h-50px form-text" value=""
-                                                        style={{ fontSize: 20 }} required>
-                                                        <option value="Male">Male</option>
-                                                        <option value="Female">Female</option>
-                                                        <option value="Other">Other</option>
-                                                    </select>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <br />
-                                        <div class="row">
-                                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                                <div class="form-group">
-                                                    <label class="profile_details_text">
-                                                        <h4 className='form-text'>Email Address: <b class="important">*</b></h4>
-                                                    </label>
-                                                    <input type="email" name="email" class="form-control h-50px" value=""
-                                                        style={{ fontSize: 20 }} required />
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <br />
                                         <div class="border"></div>
                                         <br />
                                         <div class="row">
@@ -203,15 +190,14 @@ const Personal = () => {
                                                 </div>
                                             </div>
                                         </div>
-                                        <br />
                                         <div class="row">
                                             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                                 <div class="form-group">
                                                     <label class="profile_details_text">
-                                                        <h4 className='form-text'>Date Of Birth: <b class="important">*</b></h4>
+                                                        <h4 className='form-text'>Email Address: <b class="important">*</b></h4>
                                                     </label>
-                                                    <input type="date" name="birthday" class="form-control h-20 form-text"
-                                                        style={{ fontSize: 20 }} value="" required />
+                                                    <input type="email" name="email" class="form-control h-50px" value=""
+                                                        style={{ fontSize: 20 }} required />
                                                 </div>
                                             </div>
                                         </div>
@@ -219,7 +205,7 @@ const Personal = () => {
                                         <div class="row">
 
                                             <div class="location col-6">
-                                                <h2 className='form-text'>Home</h2>
+                                                <h2 className='form-text' style={{ fontSize: 30, fontWeight: 400, color:'#000000' }}>Home</h2>
                                                 <h6 className='form-text'>55 A, 1st Floor, Street No 2, Laxmi Nagar, Delhi 110092 </h6>
                                             </div>
                                             <div class=" col-6">
