@@ -8,21 +8,33 @@ import Professional from './Pages/Professional/Profesional';
 import Support from './Pages/Support/Support';
 import Tools from './Pages/Tool/Tool';
 import Membership from './Pages/Membership/Membership';
-import React from "react";
+import React  from "react";
 
 
 
 
 import { BrowserRouter as Router, Route, Routes  } from 'react-router-dom';
+import { setUpAxios } from './server'
+import Header from './components/Header/Header'
+import { AuthProvider } from './context/Context'
+
 
 
 function App() {
+  React.useEffect(() => {
+    setUpAxios();
+});
+
+
   
   return (
-    <Router>
+   <>
+   <AuthProvider>
+   <Router>
     <div className="App">
-   
+   <Header/>
     <Routes>
+      
         <Route path="/" element={<Dashboard />}></Route>
         <Route path="/Professional" element={<Professional />}></Route>
         <Route path="/Inbox" element={<Inbox />}></Route>
@@ -37,6 +49,8 @@ function App() {
 
     </div>
     </ Router>
+   </AuthProvider>
+   </>
   );
   }
 

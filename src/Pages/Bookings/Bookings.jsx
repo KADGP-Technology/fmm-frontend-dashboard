@@ -1,9 +1,29 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import "./Booking.css";
 import pic from "../../Images/findmymualogo2.png"
+import { getBookings } from '../../server/apis/bookings';
 
 
 const Bookings = () => {
+
+    const [bookings, setBookings] = useState(null)
+
+    useEffect(() => {
+
+        const artistId = JSON.parse(localStorage.getItem('userInfo'))
+        console.log("ARTIS",artistId._id);
+        getBookings({artistId:artistId._id}).then((response)=>{
+            console.log("Leads Response==>",response.data
+            );
+            setBookings(response.data.data.customerBookings
+                )
+          }).catch((error)=>{
+            console.log("Leads Error==>",error);
+          })
+      
+    }, [])
+    
+
     var sidebarOpen = false;
     var sidebar = document.getElementById("sidebar");
 
@@ -26,7 +46,7 @@ const Bookings = () => {
             <div class="grid-container">
 
 
-                <header class="header">
+                {/* <header class="header">
                     <div class="menu-icon" onClick={openSidebar}>
                         <span class="material-icons-outlined"><ion-icon name="list"></ion-icon></span>
                     </div>
@@ -41,7 +61,7 @@ const Bookings = () => {
                         </div>
                         <span class="material-icons-outlined" style={{ marginRight: '20px', marginTop: '8px' }}><ion-icon name="person-circle" style={{ marginTop: '-6px', fontSize: '34px' }}></ion-icon></span>
                     </div>
-                </header>
+                </header> */}
 
                 <aside id="sidebar">
                     <div class="sidebar-title">
@@ -124,88 +144,35 @@ const Bookings = () => {
 
                     <div class="table-responsive">
                         <table class="table">
-                            <thead className='thead'>
+                            <thead className="lead-thead">
                                 <tr>
-                                    <th scope="col"><ion-icon name="calendar-number" className='icon-head' style={{ color: 'rgb(255, 20, 147)', fontSize: '1rem' }}></ion-icon>&nbsp;Date</th>
-                                    <th scope="col"><ion-icon name="person" className='icon-head' style={{ color: '#FF1493', fontSize: '1rem' }}></ion-icon>&nbsp;Name</th>
-                                    <th scope="col"><ion-icon name="location" style={{ color: '#FF1493', fontSize: '1rem' }}></ion-icon>&nbsp;Location</th>
-                                    <th scope="col"><ion-icon name="wallet" style={{ color: '#FF1493', fontSize: '1rem' }}></ion-icon>&nbsp;Budget</th>
-                                    <th scope="col"><ion-icon name="call" style={{ color: '#FF1493', fontSize: '1rem' }}></ion-icon>&nbsp;Contact</th>
-                                    <th scope="col" ><ion-icon name="list" style={{ color: '#FF1493', fontSize: '1rem' }}></ion-icon>&nbsp;Requirements</th>
+                                    <th scope="col"><ion-icon name="person" className='icon-head' style={{ color: '#FF385C', fontSize: '1rem' }}></ion-icon>&nbsp;Name</th>
+                                    <th scope="col"><ion-icon name="list" className='icon-head' style={{ color: '#FF385C', fontSize: '1rem' }}></ion-icon>&nbsp;Requirements</th>
+                                    <th scope="col"><ion-icon name="calendar-number" style={{ color: '#FF385C', fontSize: '1rem' }}></ion-icon>&nbsp;Date</th>
+                                    <th scope="col"><ion-icon name="location" style={{ color: '#FF385C', fontSize: '1rem' }}></ion-icon>&nbsp;Location</th>
+                                    <th scope="col"><ion-icon name="wallet" style={{ color: '#FF385C', fontSize: '1rem' }}></ion-icon>&nbsp;Budget</th>
+                                    <th scope="col" ><ion-icon name="call" style={{ color: '#FF385C', fontSize: '1rem' }}></ion-icon>&nbsp;Contact</th>
                                 </tr>
                             </thead>
-                            <tbody>
-                                <tr>
-                                    <th scope="row">20.11.2022</th>
-                                    <td>Lorem</td>
-                                    <td>Gandhi Hall, Delhi</td>
-                                    <td>4k <input type="range" /> 10k</td>
-                                    <td><ion-icon name="id-card" style={{ fontSize: '1rem' }}></ion-icon></td>
-                                    <td>Cell</td>
-
-
-                                </tr>
-                                <tr>
-                                    <th scope="row">20.11.2022</th>
-                                    <td>Lorem</td>
-                                    <td>Gandhi Hall, Delhi</td>
-                                    <td>4k <input type="range" className='range' /> 10k</td>
-                                    <td><ion-icon name="id-card" style={{ fontSize: '1rem' }}></ion-icon></td>
-                                    <td>Cell</td>
-
-
-                                </tr>
-                                <tr>
-                                    <th scope="row">20.11.2022</th>
-                                    <td>Lorem</td>
-                                    <td>Gandhi Hall, Delhi</td>
-                                    <td>4k <input type="range" /> 10k</td>
-                                    <td><ion-icon name="id-card" style={{ fontSize: '1rem' }}></ion-icon></td>
-                                    <td>Cell</td>
-
-
-                                </tr>
-                                <tr>
-                                    <th scope="row">20.11.2022</th>
-                                    <td>Lorem</td>
-                                    <td>Gandhi Hall, Delhi</td>
-                                    <td>4k <input type="range" /> 10k</td>
-                                    <td><ion-icon name="id-card" style={{ fontSize: '1rem' }}></ion-icon></td>
-                                    <td>Cell</td>
-
-
-                                </tr>
-                                <tr>
-                                    <th scope="row">20.11.2022</th>
-                                    <td>Lorem</td>
-                                    <td>Gandhi Hall, Delhi</td>
-                                    <td>4k <input type="range" /> 10k</td>
-                                    <td><ion-icon name="id-card" style={{ fontSize: '1rem' }}></ion-icon></td>
-                                    <td>Cell</td>
-
-
-                                </tr>
-                                <tr>
-                                    <th scope="row">20.11.2022</th>
-                                    <td>Lorem</td>
-                                    <td>Gandhi Hall, Delhi</td>
-                                    <td>4k <input type="range" /> 10k</td>
-                                    <td><ion-icon name="id-card" style={{ fontSize: '1rem' }}></ion-icon></td>
-                                    <td>Cell</td>
-
-
-                                </tr>
-                                <tr>
-                                    <th scope="row">20.11.2022</th>
-                                    <td>Lorem</td>
-                                    <td>Gandhi Hall, Delhi</td>
-                                    <td>4k <input type="range" /> 10k</td>
-                                    <td><ion-icon name="id-card" style={{ fontSize: '1rem' }}></ion-icon></td>
-                                    <td>Cell</td>
-
-
-                                </tr>
-                            </tbody>
+                                  { bookings?.map((item)=>{
+                                      console.log("Items==>",item);
+                                   
+                                    return (
+                                        <>
+                                        <tbody>
+                                        <tr>
+                                         <td>{item.userId.firstName}</td>
+                                         <td>{item.requireMent}</td>
+                                         <td>{item.date}</td>
+                                         <td>{item.location}</td>
+                                         <td>4k <input type="range" /> 10k</td>
+                                         {/* <td><ion-icon name="id-card" style={{ fontSize: '1rem' }}>{item.userId.phoneNumber}</ion-icon></td> */}
+                                         <td>{item.userId.phoneNumber}</td>
+                                         </tr>
+                                        </tbody>
+                                        </>
+                                    )
+                                  })}
                         </table>
                     </div>
 

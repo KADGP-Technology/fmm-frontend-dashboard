@@ -1,10 +1,30 @@
-import React from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import "./Leads.css";
 import pic from "../../Images/findmymualogo2.png"
+import { getBusinessLeads } from '../../server/apis/businessLeads';
 // import leads from '../../Images/leads.jfif'
 
 
 const Leads = () => {
+
+    const [businessLeads , setBusinessLeads] = useState(null)
+
+    useEffect(() => {
+
+        const artistId = JSON.parse(localStorage.getItem('userInfo'))
+        console.log("ARTIS",artistId._id);
+        getBusinessLeads({artistId:artistId._id}).then((response)=>{
+            console.log("Leads Response==>",response.data
+            );
+            setBusinessLeads(response.data.data.businessLeadsCustomer
+                )
+          }).catch((error)=>{
+            console.log("Leads Error==>",error);
+          })
+      
+    }, [])
+    
+
     var sidebarOpen = false;
     var sidebar = document.getElementById("sidebar");
 
@@ -27,7 +47,7 @@ const Leads = () => {
             <div class="grid-container">
 
 
-                <header class="header">
+                {/* <header class="header">
                     <div class="menu-icon" onClick={openSidebar}>
                         <span class="material-icons-outlined"><ion-icon name="list"></ion-icon></span>
                     </div>
@@ -42,7 +62,7 @@ const Leads = () => {
                         </div>
                         <span class="material-icons-outlined" style={{marginRight: '20px', marginTop: '8px' }}><ion-icon name="person-circle" style={{ marginTop: '-6px', fontSize: '34px'}}></ion-icon></span>
                     </div>
-                </header>
+                </header> */}
 
                 <aside id="sidebar">
                     <div class="sidebar-title">
@@ -127,74 +147,25 @@ const Leads = () => {
                                     <th scope="col" ><ion-icon name="call" style={{ color: '#FF385C', fontSize: '1rem' }}></ion-icon>&nbsp;Contact</th>
                                 </tr>
                             </thead>
-                            <tbody>
-                                <tr>
-                                    <td>Lorem</td>
-                                    <td>cell</td>
-                                    <td>20.11.2022</td>
-                                    <td>Gandhi Hall, Delhi</td>
-                                    <td>4k <input type="range" /> 10k</td>
-                                    <td><ion-icon name="id-card" style={{ fontSize: '1rem' }}></ion-icon></td>
-                                </tr>
-                                <tr>
-                                    <td>Lorem</td>
-                                    <td>cell</td>
-                                    <td>20.11.2022</td>
-                                    <td>Gandhi Hall, Delhi</td>
-                                    <td>4k <input type="range" /> 10k</td>
-                                    <td><ion-icon name="id-card" style={{ fontSize: '1rem' }}></ion-icon></td>
-
-
-                                </tr>
-                                <tr>
-                                    <td>Lorem</td>
-                                    <td>cell</td>
-                                    <td>20.11.2022</td>
-                                    <td>Gandhi Hall, Delhi</td>
-                                    <td>4k <input type="range" /> 10k</td>
-                                    <td><ion-icon name="id-card" style={{ fontSize: '1rem' }}></ion-icon></td>
-
-                                </tr>
-                                <tr>
-                                    <td>Lorem</td>
-                                    <td>cell</td>
-                                    <td>20.11.2022</td>
-                                    <td>Gandhi Hall, Delhi</td>
-                                    <td>4k <input type="range" /> 10k</td>
-                                    <td><ion-icon name="id-card" style={{ fontSize: '1rem' }}></ion-icon></td>
-
-                                </tr>
-                                <tr>
-                                    <td>Lorem</td>
-                                    <td>cell</td>
-                                    <td>20.11.2022</td>
-                                    <td>Gandhi Hall, Delhi</td>
-                                    <td>4k <input type="range" /> 10k</td>
-                                    <td><ion-icon name="id-card" style={{ fontSize: '1rem' }}></ion-icon></td>
-
-
-                                </tr>
-                                <tr>
-                                    <td>Lorem</td>
-                                    <td>cell</td>
-                                    <td>20.11.2022</td>
-                                    <td>Gandhi Hall, Delhi</td>
-                                    <td>4k <input type="range" /> 10k</td>
-                                    <td><ion-icon name="id-card" style={{ fontSize: '1rem' }}></ion-icon></td>
-
-
-                                </tr>
-                                <tr>
-                                    <td>Lorem</td>
-                                    <td>cell</td>
-                                    <td>20.11.2022</td>
-                                    <td>Gandhi Hall, Delhi</td>
-                                    <td>4k <input type="range" /> 10k</td>
-                                    <td><ion-icon name="id-card" style={{ fontSize: '1rem' }}></ion-icon></td>
-
-
-                                </tr>
-                            </tbody>
+                                  { businessLeads?.map((item)=>{
+                                      console.log("Items==>",item);
+                                   
+                                    return (
+                                        <>
+                                        <tbody>
+                                        <tr>
+                                         <td>{item.userId.firstName}</td>
+                                         <td>{item.requireMent}</td>
+                                         <td>{item.date}</td>
+                                         <td>{item.location}</td>
+                                         <td>4k <input type="range" /> 10k</td>
+                                         {/* <td><ion-icon name="id-card" style={{ fontSize: '1rem' }}></ion-icon></td> */}
+                                         <td>{item.userId.phoneNumber}</td>
+                                         </tr>
+                                        </tbody>
+                                        </>
+                                    )
+                                  })}
                         </table>
                     </div>
 

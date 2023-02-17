@@ -9,6 +9,10 @@ import pic from "./Images/findmymualogo2.png"
 
 
 function Dashboard(params) {
+
+ 
+    
+
     var sidebarOpen = false;
     var sidebar = document.getElementById("sidebar");
 
@@ -33,7 +37,7 @@ function Dashboard(params) {
             <div class="grid-container">
 
 
-                <header class="header">
+                {/* <header class="header">
                     <div class="menu-icon" onClick={openSidebar}>
                         <span class="material-icons-outlined"><ion-icon name="list"></ion-icon></span>
                     </div>
@@ -48,7 +52,7 @@ function Dashboard(params) {
                         </div>
                         <span class="material-icons-outlined" style={{marginRight: '20px', marginTop: '8px' }}><ion-icon name="person-circle" style={{ marginTop: '-6px', fontSize: '34px'}}></ion-icon></span>
                     </div>
-                </header>
+                </header> */}
 
                 <aside id="sidebar">
                     <div class="sidebar-title">

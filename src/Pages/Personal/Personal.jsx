@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import "./Personal.css";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import pic from "../../Images/findmymualogo2.png"
@@ -9,6 +9,8 @@ const align = {
 }
 
 const Personal = () => {
+
+    const [userInfo, setUserInfo] = useState({})
     var sidebarOpen = false;
     var sidebar = document.getElementById("sidebar");
 
@@ -26,12 +28,21 @@ const Personal = () => {
         }
     }
 
+    useEffect(() => {
+      const personalInformation = JSON.parse(localStorage.getItem('userInfo'))
+      setUserInfo(personalInformation)
+      console.log("PersonalInformation==>",personalInformation);
+    }, [])
+
+  
+    
+
     return (
         <div>
             <div class="grid-container">
 
 
-                <header class="header">
+                {/* <header class="header">
                     <div class="menu-icon" onClick={openSidebar}>
                         <span class="material-icons-outlined"><ion-icon name="list"></ion-icon></span>
                     </div>
@@ -46,7 +57,7 @@ const Personal = () => {
                         </div>
                         <span class="material-icons-outlined" style={{marginRight: '20px', marginTop: '8px' }}><ion-icon name="person-circle" style={{ marginTop: '-6px', fontSize: '34px'}}></ion-icon></span>
                     </div>
-                </header>
+                </header> */}
 
                 <aside id="sidebar">
                     <div class="sidebar-title">
@@ -133,7 +144,7 @@ const Personal = () => {
                                                             <h4 className='form-text'> First Name: <b class="important">*</b></h4>
                                                         </label>
                                                         <input type="text" name="first_name" class="form-control h-50px"
-                                                            value="" style={{ fontSize: 20 }} required />
+                                                            value={userInfo?userInfo.firstName:''} style={{ fontSize: 20 }} required />
                                                     </div>
                                                 </div>
                                                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
@@ -141,7 +152,7 @@ const Personal = () => {
                                                         <label class="profile_details_text form-text">
                                                             <h4 className='form-text'> Last Name: <b class="important">*</b></h4>
                                                         </label>
-                                                        <input type="text" name="last_name" class="form-control h-50px" value=""
+                                                        <input type="text" name="last_name" class="form-control h-50px" value={userInfo?userInfo.lastName:''}
                                                             style={{ fontSize: 20 }} required />
                                                     </div>
                                                 </div>
@@ -185,7 +196,7 @@ const Personal = () => {
                                                     <label class="profile_details_text">
                                                         <h4 className='form-text'>Contact Number: <b class="important">*</b></h4>
                                                     </label>
-                                                    <input type="tel" name="phone" class="form-control h-50px" value=""
+                                                    <input type="tel" name="phone" class="form-control h-50px" value={userInfo?userInfo.phoneNumber:''}
                                                         style={{ fontSize: 20 }} required />
                                                 </div>
                                             </div>
@@ -196,7 +207,7 @@ const Personal = () => {
                                                     <label class="profile_details_text">
                                                         <h4 className='form-text'>Email Address: <b class="important">*</b></h4>
                                                     </label>
-                                                    <input type="email" name="email" class="form-control h-50px" value=""
+                                                    <input type="email" name="email" class="form-control h-50px" value={userInfo?userInfo.email:''}
                                                         style={{ fontSize: 20 }} required />
                                                 </div>
                                             </div>
